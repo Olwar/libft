@@ -6,7 +6,7 @@
 /*   By: oairola <oairola@student.hive.fi>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 11:34:47 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/02 09:34:04 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/07 11:35:42 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	a = ft_strlen(s2);
 	i = ft_strlen(s1);
-	str = malloc(sizeof(char *) * (i + a) + 1);
+	str = malloc(sizeof(char) * (i + a) + 1);
 	if (str == NULL)
 		return (NULL);
 	i = 0;

@@ -6,7 +6,7 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:49:01 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/03 11:25:44 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/07 11:31:33 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ void	*ft_memalloc(size_t size)
 	unsigned char	*i;
 	size_t			a;
 
-	if (size > 16711568)
-		return (NULL);
 	a = 0;
 	i = malloc(size);
 	if (i == NULL)

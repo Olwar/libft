@@ -6,7 +6,7 @@
 #    By: oairola <oairola@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 14:43:10 by oairola           #+#    #+#              #
-#    Updated: 2021/12/03 11:56:25 by oairola          ###   ########.fr        #
+#    Updated: 2021/12/07 11:34:42 by oairola          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,7 +47,7 @@ $(NAME):
 	ar rc $(NAME) $(OBJECTS)
 
 clean:
-	/bin/rm -f *.o
+	/bin/rm -f $(OBJECTS)
 
 fclean: clean
 	/bin/rm -f $(NAME)
