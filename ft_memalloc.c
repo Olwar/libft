@@ -6,12 +6,11 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/03 13:49:01 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/07 11:31:33 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/09 12:39:48 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <string.h>
+#include "libft.h"
 
 void	*ft_memalloc(size_t size)
 {

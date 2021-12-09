@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oairola <oairola@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/18 11:15:34 by oairola           #+#    #+#             */
-/*   Updated: 2021/11/25 10:10:28 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/07 14:10:30 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strstr(const char *haystack, const char *needle)
 {
 	size_t	len_needle;
 	size_t	start;
-	int		start_save;
+	size_t	start_save;
 	size_t	i;
 
 	start = 0;

@@ -6,12 +6,11 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:04:57 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/02 14:54:11 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/09 12:43:27 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 static int	ft_wordlen(char const *s, char c)
 {
@@ -54,7 +53,7 @@ static char	**looper(int d, char const *s, char c, char **array)
 		}
 		if (a != 0)
 			array[d++][a] = '\0';
-		while (s[i] == c)
+		while (s[i] == c && s[i])
 			i++;
 	}
 	array[d] = NULL;
