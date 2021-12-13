@@ -6,7 +6,7 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 15:04:57 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/09 12:43:27 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/13 09:47:22 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,10 @@ static void	array_freer(char **array)
 
 	i = 0;
 	while (array[i])
+	{
 		free(array[i]);
+		i++;
+	}
 	free(array);
 }
 
@@ -41,7 +44,7 @@ static char	**looper(int d, char const *s, char c, char **array)
 	while (s[i] != '\0')
 	{
 		a = 0;
-		array[d] = malloc(sizeof(char) * ft_wordlen(&s[i], c) + 1);
+		array[d] = (char *)malloc(sizeof(char) * ft_wordlen(&s[i], c) + 1);
 		if (array[d] == NULL)
 		{
 			array_freer(array);
@@ -66,7 +69,7 @@ char	**ft_strsplit(char const *s, char c)
 	int		d;
 
 	d = 0;
-	array = malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
+	array = (char **)malloc(sizeof(char *) * ft_wordcount(s, c) + 1);
 	if (array == NULL)
 	{
 		free(array);

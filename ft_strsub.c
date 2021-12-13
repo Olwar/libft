@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsub.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: oairola <oairola@student.hive.fi>          +#+  +:+       +#+        */
+/*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/10 10:36:45 by oairola           #+#    #+#             */
-/*   Updated: 2021/11/29 14:19:56 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/13 09:47:37 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	size_t	a;
 
 	a = 0;
-	s2 = malloc(sizeof(char) * len + 1);
+	s2 = (char *)malloc(sizeof(char) * len + 1);
 	if (s2 == NULL)
 		return (NULL);
 	while (a != len)

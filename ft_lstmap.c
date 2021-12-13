@@ -6,11 +6,24 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/03 11:49:42 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/03 11:49:53 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/13 09:34:59 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
+static void	list_freer(t_list *head)
+{
+	t_list	*temp;
+
+	temp = head;
+	while (temp != NULL)
+	{
+		temp = temp->next;
+		free(head);
+		head = temp;
+	}
+}
 
 t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
@@ -30,7 +43,7 @@ t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 		}
 		if (!temp)
 		{
-			free(temp);
+			list_freer(head);
 			return (NULL);
 		}
 		cur->next = temp;

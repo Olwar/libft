@@ -6,7 +6,7 @@
 /*   By: oairola <oairola@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/11 09:49:18 by oairola           #+#    #+#             */
-/*   Updated: 2021/12/07 14:12:53 by oairola          ###   ########.fr       */
+/*   Updated: 2021/12/13 09:37:35 by oairola          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ char	*ft_itoa(int n)
 
 	c = (long int)n;
 	len = iarrlen(c);
-	str = malloc(sizeof(char) * (len + 2));
+	str = (char *)malloc(sizeof(char) * (len + 2));
 	if (str == NULL)
 		return (NULL);
 	if (c < 0)
